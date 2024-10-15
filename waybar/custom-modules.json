@@ -1,0 +1,21 @@
+//  __  __           _       _
+// |  \/  | ___   __| |_   _| | ___  ___
+// | |\/| |/ _ \ / _` | | | | |/ _ \/ __|
+// | |  | | (_) | (_| | |_| | |  __/\__ \
+// |_|  |_|\___/ \__,_|\__,_|_|\___||___/
+//
+//
+{
+  // Rice Config
+  "custom/ricecfg": {
+    "format": "",
+    "on-click": "~/.config/waybar/themes/custom/scripts/rice-menu.sh",
+    "tooltip-format": "Rice Menu"
+  },
+  // Power Menu
+  "custom/pw": {
+    "format": "",
+    "on-click": "~/.config/waybar/themes/custom/scripts/power-menu.sh",
+    "tooltip-format": "Power Menu"
+  },
+}
