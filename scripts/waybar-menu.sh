@@ -18,7 +18,7 @@ if [ -n "$selected_theme" ]; then
     pkill -x waybar
     sleep 0.5
 
-    waybar -c ~/rice/dotfiles/waybar/config -s "$themes_path/$selected_theme" &
+    waybar -c $HOME/rice/dotfiles/waybar/config -s "$themes_path/$selected_theme" &
 
     notify-send "Waybar Theme Changed" "Now using theme: $selected_theme"
 else

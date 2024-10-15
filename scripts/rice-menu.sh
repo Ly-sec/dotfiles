@@ -8,7 +8,7 @@ chosen=$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:")
 
 case "$chosen" in
     "   󱞩  Waybar")
-        waybar_dir=~/.config/waybar/themes/custom/
+        waybar_dir=~/rice/dotfiles/waybar/themes/custom/
         waybar_options=$(find "$waybar_dir" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sed 's/^/   /') # Add spaces for indentation
 
         waybar_choice=$(echo -e "$waybar_options" | rofi -dmenu -i -p "Waybar Options:")

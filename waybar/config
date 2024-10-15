@@ -20,9 +20,8 @@
 
     // Load Modules
     "include": [
-        "~/.config/ml4w/settings/waybar-quicklinks.json",
-        "~/.config/waybar/modules.json",
-	"~/.config/waybar/themes/custom/custom-modules.json"
+        "/home/lysec/rice/dotfiles/waybar/modules.json",
+	"/home/lysec/rice/dotfiles/waybar/custom-modules.json"
     ],
 
     // Modules Left
