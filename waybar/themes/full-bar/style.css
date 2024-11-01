@@ -1,0 +1,133 @@
+@import url("/home/lysec/.cache/wal/colors-waybar.css");
+
+* {
+    font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+}
+
+window#waybar {
+    background-color: @background;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    margin: 0;
+    transition: background-color 0.3s;
+}
+
+#window {
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+    opacity: 1;
+}
+
+#hyprland-workspaces {
+    background: #282828;
+    margin: 1px 0;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ebdbb2;
+}
+
+#workspaces button {
+    padding: 4px 4px;
+    margin: 2px 2px;
+    border-radius: 6px;
+    color: #ebdbb2;
+    background-color: @background;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+}
+
+#workspaces button.active {
+    color: #ffffff;
+    background: @color1;
+}
+
+#workspaces button:hover {
+    background: #333333;
+}
+
+#custom-exit {
+    /*background-color: @color1;*/
+    font-size: 16px;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 4px 12px;
+    margin: 2px;
+}
+
+#clock, #custom-appmenu {
+    background-color: @color1;
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+}
+
+tooltip {
+    border-radius: 8px;
+    background-color: rgba(29, 32, 33, 0.85);
+    color: #ebdbb2;
+    padding: 4px 8px;
+}
+
+#taskbar {
+    margin: 2px 10px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    font-weight: normal;
+}
+
+#custom-quicklink1, #custom-quicklink2, #custom-quicklink3,
+#custom-quicklink4, #custom-quicklink5, #custom-quicklink6,
+#custom-quicklink7, #custom-quicklink8, #custom-quicklink9,
+#custom-quicklink10 {
+    background-color: #b8bb26;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ebdbb2;
+    margin-right: 12px;
+    border-radius: 8px;
+    padding: 4px 8px;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+#idle_inhibitor {
+    font-size: 18px;
+    color: #ebdbb2;
+    margin-right: 10px;
+}
+
+#idle_inhibitor.activated {
+    color: #dc2f2f;
+}
+
+#backlight, #pulseaudio, #network, #bluetooth, #battery, #tray {
+    background-color: @color0;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ebdbb2;
+    border-radius: 8px;
+    padding: 4px 8px;
+    margin: 2px;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ebdbb2;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #1d2021;
+        color: #ebdbb2;
+    }
+}
