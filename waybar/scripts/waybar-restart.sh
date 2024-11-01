@@ -8,6 +8,3 @@ sleep 1
 
 # Start Waybar again
 nohup waybar >/dev/null 2>&1 &
-
-# Optional: Output message
-echo "Waybar has been restarted."
