@@ -1,0 +1,71 @@
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                      Decorations Configuration               ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+source = ~/.cache/wal/colors-hyprland.css
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                      GENERAL SETTINGS                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+general {
+    gaps_in = 5                                                 # Inner gaps between windows
+    gaps_out = 14                                               # Outer gaps around windows
+    border_size = 3                                             # Size of window borders
+    col.active_border = $color1 $color2 90deg      # Color of active window border (Red and light background)
+    col.inactive_border = rgba(3C3836aa)                         # Color of inactive window border (Dark gray)
+
+    resize_on_border = false                                    # Enable resizing by clicking borders
+    allow_tearing = false                                       # Enable or disable screen tearing
+    layout = dwindle                                            # Set default layout to dwindle
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                     DECORATION SETTINGS                     ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+decoration {
+    rounding = 10                                              # Roundness of window corners
+
+    active_opacity = 1.0                                       # Opacity of active windows
+    inactive_opacity = 0.8                                     # Opacity of inactive windows
+    fullscreen_opacity = 1.0                                   # Opacity of fullscreen windows
+
+    shadow {
+        enabled = true                                          # Enable drop shadow for windows
+        range = 3                                               # Range of shadow
+        render_power = 3                                        # Shadow rendering power
+        color = rgba(1A1A1Aaa)                                  # Color of the shadow (rgba format)
+    }
+
+    blur {                                                      # Blur settings
+        enabled = true                                          # Enable blur effect
+        size = 6                                                # Size of blur
+        passes = 2                                              # Number of blur passes
+        new_optimizations = on                                  # Enable new blur optimizations
+        ignore_opacity = true                                   # Ignore opacity for blur
+        xray = true                                             # Enable x-ray effect for blur
+        #blurls = waybar                                       # Uncomment to blur Waybar
+    }
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                     DWINDLE SETTINGS                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+dwindle {
+    pseudotile = true                                         # Enable pseudotiling
+    preserve_split = true                                     # Preserve split layouts
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                      MASTER SETTINGS                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+master {
+    new_status = master                                       # Set new status for master layout
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                  MISCELLANEOUS SETTINGS                    ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+misc {
+    force_default_wallpaper = -1                              # Disable anime mascot wallpapers (0 or 1 to disable)
+    disable_hyprland_logo = false                             # Disable random Hyprland logo / anime girl background
+}
