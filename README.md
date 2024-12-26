@@ -5,6 +5,11 @@ Welcome to my dotfiles repository! This repo contains the configuration files I 
 
 ---
 
+## Preview
+![Preview](https://i.imgur.com/YPMS98A.png)
+
+---
+
 ## 🚀 Setup Instructions
 
 The `setup.sh` script will **create symlinks** from `~/dotfiles` to the corresponding configuration directories inside your `~/.config/` folder. It will also give you the option to back up any existing configuration directories before replacing them with the symlinks.
