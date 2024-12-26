@@ -9,5 +9,5 @@ exec-once = systemctl --user start hyprpolkitagent			     # Launch hyprpolkit
 exec-once = [workspace 2] vesktop                                            # Launch Vesktop on Workspace 2
 exec-once = arrpc                                                            # Launch arrpc
 exec-once = waypaper --restore						     # Launch waypaper
-exec-once = waybar --restore						     # Launch waybar and restore last theme (~/.config/waybar/last_theme.txt)
+exec-once = ~/.config/waybar/scripts/waybar--theme.sh --restore						     # Launch waybar and restore last theme (~/.config/waybar/last_theme.txt)
 exec-once = swaync							     # Launch swaync (Notification daemon)

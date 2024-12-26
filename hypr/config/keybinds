@@ -85,5 +85,5 @@ bindm = $mainMod, mouse:273, resizewindow                                       
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃              Volume Control Bindings (XF86 Keys)            ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-binde= , xf86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | awk '{if($1>100) system("pactl set-sink-volume @DEFAULT_SINK@ 100%")}' # Raise Volume
-binde= , xf86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5% # Lower Volume
+bindel= , xf86audioraisevolume, exec, pactl set-sink-volume @DEFAULT_SINK@ +5% && pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\d+(?=%)' | awk '{if($1>100) system("pactl set-sink-volume @DEFAULT_SINK@ 100%")}' # Raise Volume
+bindel= , xf86audiolowervolume, exec, pactl set-sink-volume @DEFAULT_SINK@ -5% # Lower Volume
