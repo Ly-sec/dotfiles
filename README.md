@@ -38,6 +38,7 @@ Navigate to the `~/dotfiles` directory and run the `setup.sh` script:
 
 ```bash
 cd ~/dotfiles
+chmod +x setup.sh
 ./setup.sh
 ```
 
