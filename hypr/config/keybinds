@@ -3,7 +3,7 @@
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 $mainMod = SUPER                                                                             # Sets "Windows" key as main modifier
 
-$terminal = kitty                                                                            # Terminal emulator
+$terminal = ghostty                                                                            # Terminal emulator
 $fileManager = thunar                                                                        # File manager
 $menu = rofi -show drun                                                                      # App launcher
 $browser = firefox                                                                           # Web browser

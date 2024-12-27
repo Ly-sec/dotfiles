@@ -1,0 +1,3 @@
+clipboard-read = allow
+clipboard-write = allow
+gtk-titlebar = false
