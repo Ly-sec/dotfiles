@@ -68,12 +68,12 @@ Your system will now be set up with the dotfiles from this repository!
 ## 🛠️ Custom Configurations
 
 This repository contains configurations for the following tools:
-
 - **Hyprland**: My custom window manager setup.
 - **Waybar**: Status bar with color-coordinated modules and a cyberpunk aesthetic.
 - **Waypaper**: Wallpaper manager with automatic color theme syncing.
 - **Swaync**: Notification daemon for consistent notifications.
 - **Rofi**: Application launcher with a custom theme.
+- **Ghostty**: My current terminal emulator.
 
 ---
 
@@ -92,6 +92,7 @@ This setup assumes you're running a Linux-based OS and using tools like **Hyprla
 - **Waypaper**
 - **Swaync**
 - **Rofi**
+- **Ghostty**
 - **Pywal** (for automatic color generation from wallpapers)
 
 ---
