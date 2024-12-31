@@ -26,7 +26,7 @@
       "tooltip-format": "{title}",
       "on-click": "activate",
       "on-click-middle": "close",
-      "ignore-list": ["Alacritty", "kitty"],
+      "ignore-list": ["Alacritty", "kitty", "Ghostty"],
       "app_ids-mapping": {
         "firefoxdeveloperedition": "firefox-developer-edition"
       },

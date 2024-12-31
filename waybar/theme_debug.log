@@ -1,0 +1,13 @@
+Script run at Tue Dec 31 05:19:07 PM CET 2024 with args: 
+Restoring theme: Gruvbox-Dark-Green
+Killing existing Waybar instances...
+Launching Waybar with theme: Gruvbox-Dark-Green
+[2024-12-31 17:19:09.495] [info] Using configuration file /home/lysec/.config/waybar/themes/Gruvbox-Dark-Green/config
+[2024-12-31 17:19:09.495] [info] Including resource file: ~/.config/waybar/themes/Gruvbox-Dark-Green/modules.json
+[2024-12-31 17:19:09.495] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 17:19:09.495] [info] Using CSS file /home/lysec/.config/waybar/themes/Gruvbox-Dark-Green/style.css
+[2024-12-31 17:19:09.498] [info] Hyprland IPC starting
+[2024-12-31 17:19:09.499] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 17:19:09.499] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 17:19:09.574] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
