@@ -11,7 +11,7 @@ general {
     gaps_in = 5                                                 # Inner gaps between windows
     gaps_out = 14                                               # Outer gaps around windows
     border_size = 3                                             # Size of window borders
-    col.active_border = $color1 $color2 90deg      # Color of active window border (Red and light background)
+    col.active_border = $color2     # Color of active window border (Red and light background)
     col.inactive_border = rgba(3C3836aa)                         # Color of inactive window border (Dark gray)
 
     resize_on_border = false                                    # Enable resizing by clicking borders
@@ -23,7 +23,7 @@ general {
 # ┃                     DECORATION SETTINGS                     ┃
 # ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 decoration {
-    rounding = 10                                              # Roundness of window corners
+#    rounding = 10                                              # Roundness of window corners
 
     active_opacity = 1.0                                       # Opacity of active windows
     inactive_opacity = 0.8                                     # Opacity of inactive windows

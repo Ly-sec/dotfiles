@@ -11,3 +11,595 @@ Launching Waybar with theme: Gruvbox-Dark-Green
 [2024-12-31 17:19:09.499] [info] Loading persistent workspaces from Hyprland workspace rules
 [2024-12-31 17:19:09.574] [info] Bar configured (width: 3412, height: 46) for output: DP-2
 Waybar launched successfully.
+[2024-12-31 18:15:48.896] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:15:48.900] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:15:48.900] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:15:57.933] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:15:57.943] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:15:57.943] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:19:26.982] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:19:26.986] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:19:26.987] [info] Loading persistent workspaces from Hyprland workspace rules
+Script run at Tue Dec 31 06:22:10 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:22:12.555] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:22:12.555] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:22:12.556] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:22:12.556] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:22:12.558] [info] Hyprland IPC starting
+[2024-12-31 18:22:12.559] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:22:12.559] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:22:12.643] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:22:32 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:22:35.768] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:22:35.768] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:22:35.769] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:22:35.769] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:22:35.771] [info] Hyprland IPC starting
+[2024-12-31 18:22:35.772] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:22:35.772] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:22:35.856] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:23:03 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:23:05.464] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:23:05.464] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:23:05.465] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:23:05.465] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:23:05.467] [info] Hyprland IPC starting
+[2024-12-31 18:23:05.468] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:23:05.468] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:23:05.549] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:23:29 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:23:32.084] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:23:32.085] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:23:32.085] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:23:32.085] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:23:32.088] [info] Hyprland IPC starting
+[2024-12-31 18:23:32.089] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:23:32.089] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:23:32.169] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:24:05 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:24:07.665] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:24:07.665] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:24:07.666] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:24:07.666] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:24:07.669] [info] Hyprland IPC starting
+[2024-12-31 18:24:07.670] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:24:07.670] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:24:07.752] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:24:18 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:24:21.426] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:24:21.426] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:24:21.426] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:24:21.426] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:24:21.429] [info] Hyprland IPC starting
+[2024-12-31 18:24:21.430] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:24:21.430] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:24:21.509] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:24:35 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:24:38.154] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:24:38.155] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:24:38.155] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:24:38.155] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:24:38.158] [info] Hyprland IPC starting
+[2024-12-31 18:24:38.159] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:24:38.159] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:24:38.239] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:25:16 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:25:18.296] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:25:18.296] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:25:18.296] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:25:18.296] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:25:18.299] [info] Hyprland IPC starting
+[2024-12-31 18:25:18.300] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:25:18.300] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:25:18.384] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:25:30 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:25:32.434] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:25:32.434] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:25:32.435] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:25:32.435] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:25:32.438] [info] Hyprland IPC starting
+[2024-12-31 18:25:32.439] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:25:32.439] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:25:32.518] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:09 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:11.613] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:11.613] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:11.614] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:11.614] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:11.617] [info] Hyprland IPC starting
+[2024-12-31 18:26:11.618] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:11.618] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:11.703] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:17 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:18.974] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:18.975] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:18.975] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:18.975] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:18.978] [info] Hyprland IPC starting
+[2024-12-31 18:26:18.979] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:18.979] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:19.058] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:24 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:26.762] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:26.762] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:26.763] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:26.763] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:26.766] [info] Hyprland IPC starting
+[2024-12-31 18:26:26.767] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:26.767] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:26.847] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:37 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:40.044] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:40.044] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:40.045] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:40.045] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:40.048] [info] Hyprland IPC starting
+[2024-12-31 18:26:40.048] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:40.049] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:40.128] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:45 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:48.604] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:48.604] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:48.604] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:48.604] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:48.607] [info] Hyprland IPC starting
+[2024-12-31 18:26:48.608] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:48.608] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:48.688] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:26:53 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:26:56.053] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:26:56.053] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:26:56.054] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:26:56.054] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:26:56.056] [info] Hyprland IPC starting
+[2024-12-31 18:26:56.057] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:26:56.057] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:26:56.143] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:05 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:07.635] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:07.635] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:07.636] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:07.636] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:07.638] [info] Hyprland IPC starting
+[2024-12-31 18:27:07.639] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:07.639] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:07.720] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:13 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:16.392] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:16.392] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:16.393] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:16.393] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:16.396] [info] Hyprland IPC starting
+[2024-12-31 18:27:16.397] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:16.397] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:16.483] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:21 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:23.863] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:23.863] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:23.864] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:23.864] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:23.867] [info] Hyprland IPC starting
+[2024-12-31 18:27:23.867] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:23.867] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:23.948] [info] Bar configured (width: 3412, height: 54) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:32 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:34.168] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:34.168] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:34.168] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:34.168] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:34.171] [info] Hyprland IPC starting
+[2024-12-31 18:27:34.172] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:34.172] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:34.251] [info] Bar configured (width: 3412, height: 74) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:40 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:42.830] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:42.830] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:42.831] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:42.831] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:42.833] [info] Hyprland IPC starting
+[2024-12-31 18:27:42.834] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:42.834] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:42.919] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:46 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:48.683] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:48.683] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:48.683] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:48.683] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:48.686] [info] Hyprland IPC starting
+[2024-12-31 18:27:48.687] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:48.687] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:48.768] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:51 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:53.242] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:53.242] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:53.242] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:53.242] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:53.245] [info] Hyprland IPC starting
+[2024-12-31 18:27:53.246] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:53.246] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:53.326] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:27:56 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:27:58.552] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:27:58.552] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:27:58.552] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:27:58.552] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:27:58.555] [info] Hyprland IPC starting
+[2024-12-31 18:27:58.556] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:27:58.556] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:27:58.635] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:28:27 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:28:29.910] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:28:29.910] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:28:29.911] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:28:29.911] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:28:29.914] [info] Hyprland IPC starting
+[2024-12-31 18:28:29.915] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:28:29.915] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:28:29.994] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:28:34 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:28:36.842] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:28:36.842] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:28:36.843] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:28:36.843] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:28:36.845] [info] Hyprland IPC starting
+[2024-12-31 18:28:36.846] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:28:36.846] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:28:36.926] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:28:40 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:28:43.018] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:28:43.019] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:28:43.019] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:28:43.019] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:28:43.022] [info] Hyprland IPC starting
+[2024-12-31 18:28:43.023] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:28:43.023] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:28:43.102] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:28:47 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:28:49.282] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:28:49.282] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:28:49.283] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:28:49.283] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:28:49.285] [info] Hyprland IPC starting
+[2024-12-31 18:28:49.286] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:28:49.286] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:28:49.366] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:00 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:03.050] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:03.050] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:03.051] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:03.051] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:03.054] [info] Hyprland IPC starting
+[2024-12-31 18:29:03.055] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:03.055] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:03.134] [info] Bar configured (width: 3412, height: 102) for output: DP-2
+[2024-12-31 18:29:03.184] [warning] Requested height: 102 is less than the minimum height: 105 required by the modules
+[2024-12-31 18:29:03.184] [info] Bar configured (width: 3412, height: 105) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:08 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:11.130] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:11.130] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:11.131] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:11.131] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:11.134] [info] Hyprland IPC starting
+[2024-12-31 18:29:11.134] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:11.134] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:11.216] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:23 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:25.500] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:25.500] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:25.501] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:25.501] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:25.504] [info] Hyprland IPC starting
+[2024-12-31 18:29:25.505] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:25.505] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:25.584] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:31 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:33.190] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:33.190] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:33.191] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:33.191] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:33.193] [info] Hyprland IPC starting
+[2024-12-31 18:29:33.194] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:33.194] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:33.275] [info] Bar configured (width: 3412, height: 104) for output: DP-2
+[2024-12-31 18:29:33.295] [warning] Requested height: 104 is less than the minimum height: 107 required by the modules
+[2024-12-31 18:29:33.295] [info] Bar configured (width: 3412, height: 107) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:35 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:38.025] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:38.026] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:38.026] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:38.026] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:38.029] [info] Hyprland IPC starting
+[2024-12-31 18:29:38.030] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:38.030] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:38.109] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:40 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:42.667] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:42.667] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:42.668] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:42.668] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:42.671] [info] Hyprland IPC starting
+[2024-12-31 18:29:42.672] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:42.672] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:42.756] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:44 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:46.965] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:46.965] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:46.966] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:46.966] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:46.969] [info] Hyprland IPC starting
+[2024-12-31 18:29:46.969] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:46.970] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:47.049] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:50 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:52.897] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:52.897] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:52.898] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:52.898] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:52.901] [info] Hyprland IPC starting
+[2024-12-31 18:29:52.902] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:52.902] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:52.981] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:29:56 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:29:58.431] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:29:58.431] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:29:58.432] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:29:58.432] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:29:58.435] [info] Hyprland IPC starting
+[2024-12-31 18:29:58.436] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:29:58.436] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:29:58.519] [info] Bar configured (width: 3412, height: 46) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:30:31 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:30:33.641] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:30:33.641] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:30:33.642] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:30:33.642] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:30:33.644] [info] Hyprland IPC starting
+[2024-12-31 18:30:33.645] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:30:33.645] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:30:33.727] [info] Bar configured (width: 3412, height: 48) for output: DP-2
+Waybar launched successfully.
+Script run at Tue Dec 31 06:30:51 PM CET 2024 with args: 
+Restoring theme: Mood-Dark-Blue
+Killing existing Waybar instances...
+Launching Waybar with theme: Mood-Dark-Blue
+[2024-12-31 18:30:54.179] [info] Using configuration file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/config
+[2024-12-31 18:30:54.179] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 18:30:54.180] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 18:30:54.180] [info] Using CSS file /home/lysec/.config/waybar/themes/Mood-Dark-Blue/style.css
+[2024-12-31 18:30:54.182] [info] Hyprland IPC starting
+[2024-12-31 18:30:54.183] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:30:54.183] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:30:54.262] [info] Bar configured (width: 3412, height: 48) for output: DP-2
+Waybar launched successfully.
+[2024-12-31 18:31:55.059] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:31:55.059] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:31:55.059] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:31:57.092] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:31:57.100] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:31:57.100] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:31:58.125] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:31:58.134] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:31:58.134] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:33:04.171] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:33:04.172] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:33:04.172] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:33:18.215] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:33:18.216] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:33:18.216] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:33:25.255] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:33:25.263] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:33:25.263] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:33:26.288] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:33:26.295] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:33:26.295] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:33:28.327] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:33:28.328] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:33:28.328] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:34:00.369] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:34:00.369] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:34:00.369] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:34:25.410] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:34:25.411] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:34:25.411] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:35:37.453] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:35:37.460] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:35:37.460] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:39:21.508] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:39:21.509] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:39:21.509] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:39:30.555] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:39:30.556] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:39:30.556] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 18:39:40.597] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 18:39:40.598] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 18:39:40.598] [info] Loading persistent workspaces from Hyprland workspace rules
+Script run at Tue Dec 31 07:07:40 PM CET 2024 with args: 
+Restoring theme: Planets-Dark-Yellow
+Killing existing Waybar instances...
+Launching Waybar with theme: Planets-Dark-Yellow
+[2024-12-31 19:07:43.003] [info] Using configuration file /home/lysec/.config/waybar/themes/Planets-Dark-Yellow/config
+[2024-12-31 19:07:43.004] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 19:07:43.004] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 19:07:43.004] [info] Using CSS file /home/lysec/.config/waybar/themes/Planets-Dark-Yellow/style.css
+[2024-12-31 19:07:43.007] [info] Hyprland IPC starting
+[2024-12-31 19:07:43.008] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:07:43.008] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 19:07:43.086] [info] Bar configured (width: 3412, height: 48) for output: DP-2
+Waybar launched successfully.
+[2024-12-31 19:07:51.707] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 19:07:51.709] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:07:51.709] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 19:07:54.756] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 19:07:54.758] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:07:54.758] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 19:07:59.803] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 19:07:59.804] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:07:59.804] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 19:08:04.852] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2024-12-31 19:08:04.852] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:08:04.853] [info] Loading persistent workspaces from Hyprland workspace rules
+Script run at Tue Dec 31 07:16:38 PM CET 2024 with args: 
+Restoring theme: Planets-Dark-Yellow
+Killing existing Waybar instances...
+Launching Waybar with theme: Planets-Dark-Yellow
+[2024-12-31 19:16:43.097] [info] Using configuration file /home/lysec/.config/waybar/themes/Planets-Dark-Yellow/config
+[2024-12-31 19:16:43.097] [info] Including resource file: ~/.config/waybar/themes/Pastel-Dark-Purple/modules.json
+[2024-12-31 19:16:43.098] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-12-31 19:16:43.098] [info] Using CSS file /home/lysec/.config/waybar/themes/Planets-Dark-Yellow/style.css
+[2024-12-31 19:16:43.101] [info] Hyprland IPC starting
+[2024-12-31 19:16:43.101] [info] Loading persistent workspaces from Waybar config
+[2024-12-31 19:16:43.101] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-12-31 19:16:43.190] [info] Bar configured (width: 3412, height: 48) for output: DP-2
+Waybar launched successfully.
+
+** (waybar:496316): WARNING **: 21:53:12.200: Status Notifier Item with bus name ':1.1497' and object path '/org/ayatana/NotificationItem/droidcam' is already registered
+[2025-01-01 04:02:59.455] [info] Hyprland config reloaded, reinitializing hyprland/workspaces module...
+[2025-01-01 04:02:59.460] [info] Loading persistent workspaces from Waybar config
+[2025-01-01 04:02:59.460] [info] Loading persistent workspaces from Hyprland workspace rules
