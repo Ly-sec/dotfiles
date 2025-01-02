@@ -3,7 +3,7 @@
 }
 
 window#waybar {
-    background-color: #242036; /* Gruvbox dark background */
+    background-color: #242036;
     border: 3px solid #E09A25;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     padding: 0;
@@ -14,7 +14,7 @@ window#waybar {
 #window {
     font-size: 16px;
     font-weight: 800;
-    color: #ebdbb2; /* Gruvbox light text */
+    color: #F1E7D3;
     border-radius: 0px;
     padding: 4px 8px;
     margin: 2px;
@@ -22,48 +22,48 @@ window#waybar {
 }
 
 #hyprland-workspaces {
-    background: #332e4d; /* Gruvbox dark background */
+    background: #332e4d;
     margin: 1px 0;
     padding: 4px 8px;
     border-radius: 0px;
     font-weight: bold;
     font-size: 14px;
-    color: #ebdbb2; /* Gruvbox light text */
+    color: #F1E7D3;
 }
 
 #workspaces button {
     padding: 4px 4px;
     margin: 3px 0px;
     border-radius: 0px;
-    color: #ebdbb2; /* Gruvbox light text */
-    background-color: #332e4d; /* Gruvbox dark background */
+    color: #ebdbb2;
+    background-color: #332e4d;
     transition: all 0.3s ease-in-out;
     font-size: 14px;
 }
 
 #workspaces button.active {
-    color: #ffffff; /* White for active button text */
-    background: #E09A25; /* Muddy dark green */
+    color: #242036;
+    background: #E09A25;
 }
 
 #workspaces button:hover {
-    background: #3c3836; /* Gruvbox dark gray */
+    background: #3c3836;
 }
 
 #custom-exit {
     font-size: 16px;
     background-color: #332e4d;
-    color: #ebdbb2; /* Gruvbox light text */
+    color: #ebdbb2;
     border-radius: 0px;
     padding: 4px 4px;
     margin: 3px 0px;
 }
 
 #clock, #custom-appmenu {
-    background-color: #E09A25; /* Muddy dark green */
+    background-color: #E09A25;
     font-size: 16px;
     font-weight: 800;
-    color: #ffffff; /* White text */
+    color: #242036;
     border-radius: 0px;
     padding: 4px 8px;
     margin: 2px;
@@ -71,8 +71,8 @@ window#waybar {
 
 tooltip {
     border-radius: 0px;
-    background-color: #242036; /* Gruvbox darker background */
-    color: #ebdbb2; /* Gruvbox light text */
+    background-color: #242036;
+    color: #ebdbb2;
     padding: 4px 8px;
 }
 
@@ -84,51 +84,35 @@ tooltip {
     font-weight: normal;
 }
 
-#custom-quicklink1, #custom-quicklink2, #custom-quicklink3,
-#custom-quicklink4, #custom-quicklink5, #custom-quicklink6,
-#custom-quicklink7, #custom-quicklink8, #custom-quicklink9,
-#custom-quicklink10 {
-    background-color: #E09A25; /* Muddy dark green */
-    font-size: 18px;
-    font-weight: bold;
-    color: #ebdbb2; /* Gruvbox light text */
-    margin-right: 12px;
-    border-radius: 0px;
-    padding: 4px 8px;
-    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.2);
-}
-
 #idle_inhibitor {
     font-size: 18px;
-    color: #ebdbb2; /* Gruvbox light text */
+    color: #ebdbb2;
     margin-right: 10px;
 }
 
 #idle_inhibitor.activated {
-    color: #E09A25; /* Muddy dark green */
+    color: #E09A25;
 }
 
-
-
 #backlight, #pulseaudio, #network, #bluetooth, #battery, #tray, #custom-updates, #custom-notification {
-    background-color: #332e4d; /* Gruvbox dark background */
+    background-color: #332e4d;
     font-size: 14px;
     font-weight: 800;
-    color: #ebdbb2; /* Gruvbox light text */
+    color: #ebdbb2;
     border-radius: 0px;
     padding: 4px 4px;
     margin: 4px 0px;
 }
 
 #battery.critical:not(.charging) {
-    background-color: #E09A25; /* Muddy dark green */
-    color: #ebdbb2; /* Gruvbox light text */
+    background-color: #E09A25;
+    color: #ebdbb2;
     animation: blink 0.5s linear infinite alternate;
 }
 
 @keyframes blink {
     to {
-        background-color: #242036; /* Gruvbox darker background */
-        color: #ebdbb2; /* Gruvbox light text */
+        background-color: #242036;
+        color: #ebdbb2;
     }
 }

@@ -7,13 +7,13 @@
     "spacing": 0,
 
     "include": [
-        "~/.config/waybar/themes/Pastel-Dark-Purple/modules.json"
+        "~/.config/waybar/themes/Gruvbox-Green-Dark/modules.json"
     ],
 
     "modules-left": [
         "custom/appmenu",
         "wlr/taskbar",
-        "hyprland/window"
+        "hyprland/window",
     ],
 
     "modules-center": [

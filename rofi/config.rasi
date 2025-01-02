@@ -9,15 +9,15 @@ configuration {
 * {
     font: "Jetbrains Mono 12";
     foreground: #ebdbb2;
-    background-color: #1D2021;
+    background-color: #242036;
     active-background: #d79921; /* Waybar active background */
     urgent-background: #ef9f76; /* Waybar urgent background */
     urgent-foreground: #282a36;
-    selected-background: #627f43;
+    selected-background: #E09A25;
     selected-urgent-background: @urgent-background;
     selected-active-background: @active-background;
     separatorcolor: @active-background;
-    bordercolor: #627f43;
+    bordercolor: #E09A25;
 }
 
 #window {

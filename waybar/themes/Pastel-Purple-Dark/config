@@ -7,7 +7,7 @@
     "spacing": 0,
 
     "include": [
-        "~/.config/waybar/themes/Pastel-Dark-Purple/modules.json"
+        "~/.config/waybar/themes/Pastel-Purple-Dark/modules.json"
     ],
 
     "modules-left": [
