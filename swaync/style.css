@@ -1,11 +1,100 @@
-@define-color cc-bg #282828; /* Background color */
-@define-color noti-border-color #627f43; /* Gruvbox green from Waybar */
-@define-color noti-bg #282828; /* Same background color as #282828 */
+@define-color cc-bg #242036; /* Background color */
+@define-color cc-light-bg #332e4d;
+@define-color noti-border-color #E09A25; /* Gruvbox green from Waybar */
+@define-color noti-bg #242036; /* Same background color as #282828 */
 @define-color noti-bg-focus #2c3e50; /* Focused background color */
-@define-color noti-close-bg #627f43; /* Close button background color same as border */
+@define-color noti-close-bg #E09A25; /* Close button background color same as border */
 @define-color noti-bg-hover #333333; /* Hover color for background */
 @define-color text-color #c3c6cd;
 @define-color bg-selected #c3c6cd;
+
+.control-center {
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  padding: 8px;
+  background: @cc-bg;
+  margin-bottom: 14px;
+}
+
+.widget-title {
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  padding: 8px;
+  margin: 8px;
+  background: #332e4d;
+  margin-bottom: 14px;
+}
+
+
+.widget-title > button {
+  background: @cc-light-bg;
+  color: @text-color;
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+}
+
+.widget-title > button:hover {
+  background: @noti-border-color;
+  color: @cc-bg;
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+}
+
+.widget-dnd {
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  padding: 8px;
+  margin: 8px;
+  background: #332e4d;
+  margin-bottom: 14px;
+}
+
+.widget-dnd > switch {
+  border-radius: 5px;
+  background: @cc-light-bg;
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+}
+
+.widget-dnd > switch:checked {
+  background: @noti-border-color;
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+}
+
+.widget-dnd > switch slider {
+  background: @cc-bg;
+  border-radius: 0px;
+}
+.widget-dnd > switch:checked slider {
+  background: @cc-bg;
+  border-radius: 0px;
+}
+
+.widget-buttons-grid {
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  padding: 8px;
+  margin: 8px;
+  background: #332e4d;
+  margin-bottom: 14px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: rgba(122, 162, 247, 1);
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  background: @cc-light-bg;
+  min-width: 110px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: rgba(122, 162, 247, 1);
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
+  color: @cc-bg;
+  background: @noti-border-color;
+}
 
 .notification-row {
   outline: none;
@@ -17,37 +106,38 @@
 }
 
 .notification-row .notification-background {
-  padding: 8px 14px;
-  margin: 4px;
+  
+  padding: 10px 0px;
+  margin: 0px;
 }
 
 .notification-row .notification-background .close-button {
-  background: @noti-close-bg; /* Green border for close button */
+  background: @noti-close-bg;
   color: @text-color;
   text-shadow: none;
   padding: 0;
-  border-radius: 100%;
-  margin-top: 6px;
-  margin-right: 6px;
+  margin-top: 3px;
+  margin-right: 3px;
   box-shadow: none;
   border: none;
+  border-radius: 0px;
   min-width: 24px;
   min-height: 24px;
 }
 
 .notification-row .notification-background .close-button:hover {
-  background: @noti-border-color; /* Hover uses the green border color */
+  background: @noti-border-color;
   transition: background 0.15s ease-in-out;
   border: none;
 }
 
 .notification-row .notification-background .notification {
   margin: 4px;
-  border-radius: 12px;
-  border: 1px solid @noti-border-color; /* Green border */
+  border: 3px solid @noti-border-color;
   padding: 8px;
   transition: background 0.15s ease-in-out;
-  background: @noti-bg; /* Using #282828 as background */
+  background: @cc-bg-light;
+  border-radius: 0px;
 }
 
 .notification-row .notification-background .notification .notification-action,
@@ -59,6 +149,7 @@
   border: none;
   color: @text-color;
   transition: background 0.15s ease-in-out;
+  border-radius: 0px; /* No rounded corners */
 }
 
 .notification-row .notification-background .notification .notification-action:hover,
@@ -68,7 +159,7 @@
 }
 
 .notification-row .notification-background .notification .notification-default-action {
-  border-radius: 12px;
+  border-radius: 0px;
 }
 
 .notification-row .notification-background .notification .notification-default-action:not(:only-child) {
@@ -78,13 +169,13 @@
 
 .notification-row .notification-background .notification .notification-default-action .notification-content {
   background: transparent;
-  border-radius: 12px;
+  border-radius: 0px;
   padding: 8px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .image {
   -gtk-icon-effect: none;
-  border-radius: 100px;
+  border-radius: 0px;
   margin: 6px;
 }
 
@@ -126,7 +217,7 @@
 .notification-row .notification-background .notification .notification-default-action .notification-content .body-image {
   margin-top: 4px;
   background-color: white;
-  border-radius: 12px;
+  border-radius: 0px;
   -gtk-icon-effect: none;
 }
 
@@ -138,15 +229,15 @@
   background: @noti-bg-darker;
   color: @text-color;
   caret-color: @text-color;
-  border: 1px solid @noti-border-color;
-  border-radius: 12px;
+  border: 3px solid @noti-border-color;
+  border-radius: 0px;
 }
 
 .notification-row .notification-background .notification .notification-default-action .notification-content .inline-reply .inline-reply-button {
   margin-left: 4px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
-  border-radius: 12px;
+  border-radius: 0px;
   color: @text-color;
 }
 
@@ -174,10 +265,10 @@
 }
 
 .notification-row .notification-background .notification .notification-action:first-child {
-  border-bottom-left-radius: 12px;
+  border-bottom-left-radius: 0px;
 }
 
 .notification-row .notification-background .notification .notification-action:last-child {
-  border-bottom-right-radius: 12px;
+  border-bottom-right-radius: 0px;
   border-right: none;
 }
