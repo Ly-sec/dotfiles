@@ -25,7 +25,7 @@
         "pulseaudio",
         "custom/updates",
         "custom/notification",
-        "custom/exit",
+        /*"custom/exit",*/
         "clock"
     ]
 }
