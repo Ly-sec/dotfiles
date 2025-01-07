@@ -9,9 +9,9 @@ exec-once = systemctl --user start hyprpolkitagent			     # Launch hyprpolkit
 exec-once = [workspace 2] vesktop                                            # Launch Vesktop on Workspace 2
 exec-once = arrpc                                                            # Launch arrpc
 exec-once = waypaper --restore						     # Launch waypaper
-exec-once = ~/.config/waybar/scripts/waybar-theme.sh --restore						     # Launch waybar and restore last theme (~/.config/waybar/last_theme.txt)
+exec-once = waybar -c ~/.config/waybar/config -s ~/dotfiles/waybar/style.css					     # Launch waybar and restore last theme (~/.config/waybar/last_theme.txt)
 exec-once = swaync							     # Launch swaync (Notification daemon)
-exec-once=dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 
 # ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 # ┃                           Env Vars                          |

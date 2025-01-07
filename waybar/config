@@ -7,7 +7,7 @@
     "spacing": 0,
 
     "include": [
-        "~/.config/waybar/themes/Amber-Twilight-Dark/modules.json"
+        "~/.config/waybar/modules.json"
     ],
 
     "modules-left": [

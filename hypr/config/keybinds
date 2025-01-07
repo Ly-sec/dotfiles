@@ -26,7 +26,6 @@ bind = $mainMod, B, exec, $browser                                              
 bind = $mainMod CTRL, W, exec, waypaper                                                     # Launch Wallpaper Selector
 bind = $mainMod CTRL, RETURN, exec, $menu                                                   # Open Application Menu (Rofi)
 bind = $mainMod SHIFT, B, exec, ~/.config/waybar/scripts/waybar-restart.sh                  # Reload Waybar
-bind = $mainMod CTRL, B, exec, ~/.config/waybar/scripts/waybar-theme.sh
 
 bind = $mainMod, E, exec, $fileManager                                                      # Launch File Manager
 bind = $mainMod, T, togglefloating                                                          # Toggle Floating Mode
