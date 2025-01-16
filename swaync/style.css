@@ -100,13 +100,13 @@
 
 .notification-row .notification-background {
   padding: 0px 0px;
-  margin: 0px;
+  margin: 10px;
 }
 
 .notification-row .notification-background .close-button {
   background: @noti-close-bg;
   color: @text-color;
-  padding: 0;
+  padding: 0px;
   margin-top: 3px;
   margin-right: 3px;
   border-radius: 0px;
