@@ -49,10 +49,39 @@ parse_flags() {
 }
 
 is_git_clean() {
-    if git -C "$DOTFILES_DIR" diff --quiet && git -C "$DOTFILES_DIR" diff --cached --quiet && ! git -C "$DOTFILES_DIR" ls-files --others --exclude-standard | grep -q '.'; then
+    if git -C "$DOTFILES_DIR" diff --quiet && \
+       git -C "$DOTFILES_DIR" diff --cached --quiet && \
+       ! git -C "$DOTFILES_DIR" ls-files --others --exclude-standard | grep -q '.'; then
         return 0
     fi
     return 1
+}
+
+show_git_changes() {
+    echo -e "\n${YELLOW}${INFO}${RESET} Git status summary in ${DOTFILES_DIR}:"
+
+    local unstaged staged untracked
+
+    staged=$(git -C "$DOTFILES_DIR" diff --cached --name-only)
+    unstaged=$(git -C "$DOTFILES_DIR" diff --name-only)
+    untracked=$(git -C "$DOTFILES_DIR" ls-files --others --exclude-standard)
+
+    [[ -n "$staged" ]] && {
+        echo -e " ${GREEN}Staged but uncommitted:${RESET}"
+        echo "$staged" | sed 's/^/  - /'
+    }
+
+    [[ -n "$unstaged" ]] && {
+        echo -e " ${YELLOW}Modified (unstaged):${RESET}"
+        echo "$unstaged" | sed 's/^/  - /'
+    }
+
+    [[ -n "$untracked" ]] && {
+        echo -e " ${RED}Untracked files:${RESET}"
+        echo "$untracked" | sed 's/^/  - /'
+    }
+
+    echo
 }
 
 is_git_behind_remote() {
@@ -164,6 +193,7 @@ main() {
     else
         if ! is_git_clean; then
             echo -e "${WARN} Warning: You have uncommitted changes or untracked files in your dotfiles directory."
+            show_git_changes
         fi
 
         if is_git_behind_remote; then
@@ -176,7 +206,6 @@ main() {
 
     echo -e "${YELLOW}${INFO}${RESET} Found ${#FOLDERS[@]} folders to process in dotfiles:"
     for folder in "${FOLDERS[@]}"; do
-        # Properly print bold folder names with ANSI escape codes interpreted
         printf " - \033[1m%s\033[0m\n" "$folder"
     done
     echo
