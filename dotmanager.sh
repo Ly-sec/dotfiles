@@ -86,7 +86,11 @@ prompt_pull() {
 }
 
 choose_folders() {
-    mapfile -t FOLDERS < <(find "$DOTFILES_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' | sort)
+    mapfile -t FOLDERS < <(
+        find "$DOTFILES_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' |
+        grep -vE '^\.' |  # exclude dotfolders
+        sort
+    )
 }
 
 prompt_backup_or_skip() {
