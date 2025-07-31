@@ -7,6 +7,7 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONFIG_DIR="$HOME/.config"
 BACKUP_DIR="$HOME/.config_backup"
+GITHUB_REPO="GitHub: https://github.com/Ly-sec/dotfiles"
 
 # ─── STYLING ───────────────────────────────────────────────────────────────
 
@@ -34,7 +35,7 @@ print_header() {
     printf "${BLUE}${RESET} Safely replaces configs in ~/.config with links from: ${DOTFILES_DIR}${RESET}"
     printf "%*s${BLUE}${RESET}\n" $((width - 53)) ""
 
-    printf "${BLUE}${RESET} GitHub: https://github.com/Ly-sec/dotfiles${RESET}"
+    printf "${BLUE}${RESET} ${GITHUB_REPO}${RESET}"
     printf "%*s${BLUE}${RESET}\n" $((width - 44)) ""
 }
 
@@ -58,7 +59,7 @@ is_git_clean() {
 }
 
 show_git_changes() {
-    echo -e "\n${YELLOW}${INFO}${RESET} Git status summary in ${DOTFILES_DIR}:"
+    echo -e "\n${YELLOW} ${INFO}${RESET} Git status summary in ${DOTFILES_DIR}:"
 
     local unstaged staged untracked
 
@@ -101,12 +102,12 @@ prompt_pull() {
         read -rp "Local branch is behind remote. Pull latest changes now? [Y/n]: " yn
         case "$yn" in
             [Yy]* | "") 
-                echo -e "${INFO} Pulling latest changes..."
+                echo -e " ${INFO} Pulling latest changes..."
                 git -C "$DOTFILES_DIR" pull --ff-only
                 return 0
                 ;;
             [Nn]* )
-                echo -e "${WARN} Skipping pull. You might be working with outdated files."
+                echo -e " ${WARN} Skipping pull. You might be working with outdated files."
                 return 1
                 ;;
             * ) echo "Please answer yes or no." ;;
@@ -139,7 +140,7 @@ prompt_backup_or_skip() {
 }
 
 perform_symlinks() {
-    echo -e "${YELLOW}${INFO}${RESET} Preparing to link ${#FOLDERS[@]} folders from ${DOTFILES_DIR}\n"
+    echo -e "${YELLOW} ${INFO}${RESET} Preparing to link ${#FOLDERS[@]} folders from ${DOTFILES_DIR}\n"
     echo
 
     for folder in "${FOLDERS[@]}"; do
@@ -147,7 +148,7 @@ perform_symlinks() {
         local target="$CONFIG_DIR/$folder"
 
         if [ ! -d "$source" ]; then
-            echo -e " ${RED}${CROSS}${RESET} Source not found: $source"
+            echo -e " ${RED} ${CROSS}${RESET} Source not found: $source"
             continue
         fi
 
@@ -177,11 +178,11 @@ perform_symlinks() {
 
         echo -e " ${INFO} Linking: ~/.config/$folder → ~/$(basename "$DOTFILES_DIR")/$folder"
         $DRY_RUN || ln -sfn "$source" "$target"
-        echo -e "   ${GREEN}${CHECK}${RESET} Linked successfully"
+        echo -e "   ${GREEN} ${CHECK}${RESET} Linked successfully"
         echo
     done
 
-    echo -e "${GREEN}${CHECK}${RESET} All dotfiles processed."
+    echo -e "${GREEN} ${CHECK}${RESET} All dotfiles processed."
 }
 
 main() {
@@ -204,16 +205,16 @@ main() {
 
     choose_folders
 
-    echo -e "${YELLOW}${INFO}${RESET} Found ${#FOLDERS[@]} folders to process in dotfiles:"
+    echo -e "${YELLOW} ${INFO}${RESET} Found ${#FOLDERS[@]} folders to process in dotfiles:"
     for folder in "${FOLDERS[@]}"; do
         printf " - \033[1m%s\033[0m\n" "$folder"
     done
     echo
 
-    read -rp "Proceed with creating symlinks for these folders? [Y/n]: " proceed
+    read -rp " Proceed with creating symlinks for these folders? [Y/n]: " proceed
     case "$proceed" in
         [Nn]*) echo "Aborted by user."; exit 1 ;;
-        *) echo -e "${INFO} Proceeding with symlink creation..." ;;
+        *) echo -e " ${INFO} Proceeding with symlink creation..." ;;
     esac
 
     perform_symlinks

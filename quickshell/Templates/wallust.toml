@@ -45,5 +45,3 @@ check_contrast = true
 # ¡ If either one is a directory, then both SHOULD be one. !
 # zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
 Quickshell = { template = 'quickshell.json', target = '~/.config/Noctalia/Theme.json' }
-Niri = { template = 'niri.kdl', target = '~/.config/niri/config.kdl'}
-Kitty = { template = 'kitty.conf', target = '~/.config/kitty/wallust.conf'}

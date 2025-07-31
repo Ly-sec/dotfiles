@@ -170,15 +170,12 @@ Item {
                             return Theme.accentPrimary;
                         if (model.isUrgent)
                             return Theme.error;
-                        if (model.isActive)
-                            return Theme.accentSecondary;
-                        if (model.isOccupied)
-                            return Qt.darker(Theme.accentSecondary, 1.5);
-
+                        if (model.isActive || model.isOccupied)
+                            return Theme.accentTertiary;
                         if (model.isUrgent)
                             return Theme.error;
 
-                        return Theme.surfaceVariant.lighter(1.5);
+                        return Theme.outline;
                     }
                     scale: model.isFocused ? 1.0 : 0.9
                     z: 0

@@ -26,13 +26,20 @@ Scope {
         return Math.round(value / step) * step;
     }
 
+    // Volume property reflecting current audio volume in 0-100
+    // Will be kept in sync dynamically below
+    property int volume: (defaultAudioSink && defaultAudioSink.audio && !defaultAudioSink.audio.muted)
+                        ? Math.round(defaultAudioSink.audio.volume * 100)
+                        : 0
+
+    // Function to update volume with clamping, stepping, and applying to audio sink
     function updateVolume(vol) {
         var clamped = Math.max(0, Math.min(100, vol));
         var stepped = roundToStep(clamped, 5);
-        volume = stepped;
         if (defaultAudioSink && defaultAudioSink.audio) {
             defaultAudioSink.audio.volume = stepped / 100;
         }
+        volume = stepped;
     }
 
     Component.onCompleted: {
@@ -94,8 +101,8 @@ Scope {
         id: notificationHistoryWin
     }
 
+    // Reference to the default audio sink from Pipewire
     property var defaultAudioSink: Pipewire.defaultAudioSink
-    property int volume: defaultAudioSink && defaultAudioSink.audio && defaultAudioSink.audio.volume && !defaultAudioSink.audio.muted ? Math.round(defaultAudioSink.audio.volume * 100) : 0
 
     PwObjectTracker {
         objects: [Pipewire.defaultAudioSink]
@@ -134,6 +141,29 @@ Scope {
                 pendingReload = true;
             } else {
                 reloadTimer.restart();
+            }
+        }
+    }
+
+    // --- NEW: Keep volume property in sync with actual Pipewire audio sink volume ---
+
+    Connections {
+        target: defaultAudioSink.audio
+        onVolumeChanged: {
+            if (defaultAudioSink.audio && !defaultAudioSink.audio.muted) {
+                volume = Math.round(defaultAudioSink.audio.volume * 100);
+                console.log("Volume changed externally to:", volume);
+            }
+        }
+        onMutedChanged: {
+            if (defaultAudioSink.audio) {
+                if (defaultAudioSink.audio.muted) {
+                    volume = 0;
+                    console.log("Audio muted, volume set to 0");
+                } else {
+                    volume = Math.round(defaultAudioSink.audio.volume * 100);
+                    console.log("Audio unmuted, volume restored to:", volume);
+                }
             }
         }
     }

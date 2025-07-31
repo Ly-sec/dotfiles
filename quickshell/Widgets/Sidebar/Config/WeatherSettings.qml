@@ -52,7 +52,7 @@ Rectangle {
             Rectangle {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 40
-                radius: 8
+                radius: 16
                 color: Theme.surfaceVariant
                 border.color: cityInput.activeFocus ? Theme.accentPrimary : Theme.outline
                 border.width: 1

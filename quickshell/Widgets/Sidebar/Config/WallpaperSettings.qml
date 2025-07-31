@@ -15,25 +15,25 @@ Rectangle {
         anchors.margins: 18
         spacing: 12
 
-        // Header
-        RowLayout {
-            Layout.fillWidth: true
-            spacing: 12
-            Text {
-                text: "image"
-                font.family: "Material Symbols Outlined"
-                font.pixelSize: 20
-                color: Theme.accentPrimary
-            }
-            Text {
-                text: "Wallpaper Settings"
-                font.family: Theme.fontFamily
-                font.pixelSize: 16
-                font.bold: true
-                color: Theme.textPrimary
-                Layout.fillWidth: true
-            }
+    // Header
+    RowLayout {
+        Layout.fillWidth: true
+        spacing: 12
+        Text {
+            text: "image"
+            font.family: "Material Symbols Outlined"
+            font.pixelSize: 20
+            color: Theme.accentPrimary
         }
+        Text {
+            text: "Wallpaper Settings"
+            font.family: Theme.fontFamily
+            font.pixelSize: 16
+            font.bold: true
+            color: Theme.textPrimary
+            Layout.fillWidth: true
+        }
+    }
 
         ColumnLayout {
             spacing: 8
@@ -51,7 +51,7 @@ Rectangle {
             Rectangle {
                 Layout.fillWidth: true
                 Layout.preferredHeight: 40
-                radius: 8
+                radius: 16
                 color: Theme.surfaceVariant
                 border.color: folderInput.activeFocus ? Theme.accentPrimary : Theme.outline
                 border.width: 1
@@ -350,7 +350,7 @@ Rectangle {
                     color: Theme.surfaceVariant
                     border.color: resizeComboBox.activeFocus ? Theme.accentPrimary : Theme.outline
                     border.width: 1
-                    radius: 8
+                    radius: 16
                 }
 
                 contentItem: Text {
@@ -392,7 +392,7 @@ Rectangle {
                         color: Theme.surfaceVariant
                         border.color: Theme.outline
                         border.width: 1
-                        radius: 8
+                        radius: 16
                     }
                 }
 
@@ -445,7 +445,7 @@ Rectangle {
                     color: Theme.surfaceVariant
                     border.color: transitionTypeComboBox.activeFocus ? Theme.accentPrimary : Theme.outline
                     border.width: 1
-                    radius: 8
+                    radius: 16
                 }
 
                 contentItem: Text {
@@ -487,7 +487,7 @@ Rectangle {
                         color: Theme.surfaceVariant
                         border.color: Theme.outline
                         border.width: 1
-                        radius: 8
+                        radius: 16
                     }
                 }
 

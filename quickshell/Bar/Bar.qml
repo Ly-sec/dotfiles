@@ -1,4 +1,5 @@
 import QtQuick
+import QtQuick.Controls
 import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
@@ -8,11 +9,10 @@ import qs.Bar.Modules
 import qs.Settings
 import qs.Services
 import qs.Components
+import qs.Helpers
 import qs.Widgets
 import qs.Widgets.Sidebar
 import qs.Widgets.Sidebar.Panel
-import qs.Helpers
-import QtQuick.Controls
 import qs.Widgets.Notification
 
 Scope {
@@ -87,6 +87,18 @@ Scope {
                         anchors.rightMargin: 18
                         spacing: 12
 
+                        SystemTray {
+                            id: systemTrayModule
+                            shell: rootScope.shell
+                            anchors.verticalCenter: parent.verticalCenter
+                            bar: panel
+                            trayMenu: externalTrayMenu
+                        }
+
+                        CustomTrayMenu {
+                            id: externalTrayMenu
+                        }
+
                         NotificationIcon {
                             anchors.verticalCenter: parent.verticalCenter
                         }
@@ -105,18 +117,6 @@ Scope {
                             id: widgetsVolume
                             shell: rootScope.shell
                             anchors.verticalCenter: parent.verticalCenter
-                        }
-
-                        SystemTray {
-                            id: systemTrayModule
-                            shell: rootScope.shell
-                            anchors.verticalCenter: parent.verticalCenter
-                            bar: panel
-                            trayMenu: externalTrayMenu
-                        }
-
-                        CustomTrayMenu {
-                            id: externalTrayMenu
                         }
 
                         ClockWidget {

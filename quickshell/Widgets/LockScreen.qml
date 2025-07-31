@@ -27,12 +27,13 @@ WlSessionLock {
     property double currentTemp: 0
     locked: false
 
-    // On component completed, fetch weather data
+    // Request to fetch weather with a little delay to ensure weatherCity is properly loaded.
     Component.onCompleted: {
-        fetchWeatherData();
+        Qt.callLater(function () {
+            fetchWeatherData();
+        })
     }
 
-    // Weather fetching function
     function fetchWeatherData() {
         WeatherHelper.fetchCityWeather(weatherCity, function (result) {
             weatherData = result.weather;
@@ -62,7 +63,6 @@ WlSessionLock {
         return "cloud";
     }
 
-    // Authentication function
     function unlockAttempt() {
         console.log("Unlock attempt started");
         if (!pamAvailable) {
@@ -126,9 +126,8 @@ WlSessionLock {
         console.log("PAM start result:", started);
     }
 
-    // Lock surface
     WlSessionLockSurface {
-        // Blurred wallpaper background
+        // Wallpaper image to blur
         Image {
             id: lockBgImage
             anchors.fill: parent
@@ -136,21 +135,23 @@ WlSessionLock {
             source: WallpaperManager.currentWallpaper !== "" ? WallpaperManager.currentWallpaper : ""
             cache: true
             smooth: false
-            visible: true // Show the original for FastBlur input
+            visible: true // source for MultiEffect
         }
-        FastBlur {
+
+        MultiEffect {
+            id: lockBgBlur
             anchors.fill: parent
             source: lockBgImage
-            radius: 48 // Adjust blur strength as needed
-            transparentBorder: true
+            blurEnabled: true
+            blur: 0.48   // controls blur strength (0 to 1)
+            blurMax: 128 // max blur radius in pixels
         }
-        // Main content container (moved up, Rectangle removed)
+
         ColumnLayout {
             anchors.centerIn: parent
             spacing: 30
             width: Math.min(parent.width * 0.8, 400)
 
-            // User avatar/icon
             Rectangle {
                 Layout.alignment: Qt.AlignHCenter
                 width: 80
@@ -164,7 +165,7 @@ WlSessionLock {
                     anchors.margins: 4
                     source: Settings.settings.profileImage
                     fillMode: Image.PreserveAspectCrop
-                    visible: false // Only show the masked version
+                    visible: false
                     asynchronous: true
                 }
                 OpacityMask {
@@ -178,7 +179,6 @@ WlSessionLock {
                     }
                     visible: Settings.settings.profileImage !== ""
                 }
-                // Fallback icon
                 Text {
                     anchors.centerIn: parent
                     text: "person"
@@ -187,7 +187,6 @@ WlSessionLock {
                     color: Theme.onAccent
                     visible: Settings.settings.profileImage === ""
                 }
-                // Glow effect
                 layer.enabled: true
                 layer.effect: Glow {
                     color: Theme.accentPrimary
@@ -196,7 +195,6 @@ WlSessionLock {
                 }
             }
 
-            // Username
             Text {
                 Layout.alignment: Qt.AlignHCenter
                 text: Quickshell.env("USER")
@@ -206,7 +204,6 @@ WlSessionLock {
                 color: Theme.textPrimary
             }
 
-            // Password input container
             Rectangle {
                 Layout.fillWidth: true
                 height: 50
@@ -232,7 +229,6 @@ WlSessionLock {
                     text: lock.password
                     onTextChanged: lock.password = text
 
-                    // Placeholder text
                     Text {
                         anchors.centerIn: parent
                         text: "Enter password..."
@@ -242,7 +238,6 @@ WlSessionLock {
                         visible: !passwordInput.text && !passwordInput.activeFocus
                     }
 
-                    // Handle Enter key
                     Keys.onPressed: function (event) {
                         if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
                             lock.unlockAttempt();
@@ -255,7 +250,6 @@ WlSessionLock {
                 }
             }
 
-            // Error message
             Rectangle {
                 id: errorMessageRect
                 Layout.alignment: Qt.AlignHCenter
@@ -264,7 +258,7 @@ WlSessionLock {
                 color: Theme.overlay
                 radius: 22
                 visible: lock.errorMessage !== ""
-                
+
                 Text {
                     anchors.centerIn: parent
                     text: lock.errorMessage
@@ -276,7 +270,6 @@ WlSessionLock {
                 }
             }
 
-            // Unlock button
             Rectangle {
                 Layout.alignment: Qt.AlignHCenter
                 width: 120
@@ -325,7 +318,6 @@ WlSessionLock {
             offsetX: screen.width / 2 + 30
             offsetY: 0
             anchors.top: parent.top
-            //anchors.horizontalCenter: parent.horizontalCenter
             visible: Settings.settings.showCorners
             z: 50
         }
@@ -338,27 +330,25 @@ WlSessionLock {
             offsetX: - Screen.width / 2 - 30
             offsetY: 0
             anchors.top: parent.top
-            //anchors.horizontalCenter: parent.horizontalCenter
             visible: Settings.settings.showCorners
             z: 51
         }
-        
+
         Rectangle {
-            width: infoColumn.width + 16
-            height: infoColumn.height
+            width: infoColumn.width + 32
+            height: infoColumn.height + 8
             color: (Theme.backgroundPrimary !== undefined && Theme.backgroundPrimary !== null) ? Theme.backgroundPrimary : "#222"
             anchors.horizontalCenter: parent.horizontalCenter
             bottomLeftRadius: 20
             bottomRightRadius: 20
-            
-            // Top-center info panel (clock + weather)
+
             ColumnLayout {
                 id: infoColumn
                 anchors.top: parent.top
                 anchors.horizontalCenter: parent.horizontalCenter
                 anchors.topMargin: 0
                 spacing: 8
-                // Clock
+
                 Text {
                     id: timeText
                     text: Qt.formatDateTime(new Date(), "HH:mm")
@@ -379,12 +369,13 @@ WlSessionLock {
                     horizontalAlignment: Text.AlignHCenter
                     Layout.alignment: Qt.AlignHCenter
                 }
-                // Weather info (centered, no city)
+
                 RowLayout {
                     spacing: 6
                     Layout.alignment: Qt.AlignHCenter
                     anchors.horizontalCenter: parent.horizontalCenter
                     visible: weatherData && weatherData.current_weather
+
                     Text {
                         text: weatherData && weatherData.current_weather ? materialSymbolForCode(weatherData.current_weather.weathercode) : "cloud"
                         font.family: "Material Symbols Outlined"
@@ -392,15 +383,16 @@ WlSessionLock {
                         color: Theme.accentPrimary
                         verticalAlignment: Text.AlignVCenter
                     }
+
                     Text {
-                        text: weatherData && weatherData.current_weather ? (Settings.settings.useFahrenheit ? `${Math.round(weatherData.current_weather.temperature * 9 / 5 + 32)}°F` : `${Math.round(weatherData.current_weather.temperature)}°C`) : (Settings.settings.useFahrenheit ? "--°F" : "--°C")
+                        text: weatherData && weatherData.current_weather ? ((Settings.settings.useFahrenheit !== undefined ? Settings.settings.useFahrenheit : false) ? `${Math.round(weatherData.current_weather.temperature * 9 / 5 + 32)}°F` : `${Math.round(weatherData.current_weather.temperature)}°C`) : ((Settings.settings.useFahrenheit !== undefined ? Settings.settings.useFahrenheit : false) ? "--°F" : "--°C")
                         font.family: Theme.fontFamily
                         font.pixelSize: 18
                         color: Theme.textSecondary
                         verticalAlignment: Text.AlignVCenter
                     }
                 }
-                // Weather error
+
                 Text {
                     text: weatherError
                     color: Theme.error
@@ -413,7 +405,6 @@ WlSessionLock {
             }
         }
 
-        // Update clock every second
         Timer {
             interval: 1000
             running: true
@@ -424,7 +415,6 @@ WlSessionLock {
             }
         }
 
-        // Update weather every 10 minutes
         Timer {
             interval: 600000 // 10 minutes
             running: true
@@ -434,13 +424,12 @@ WlSessionLock {
             }
         }
 
-        // System control buttons (bottom right)
         ColumnLayout {
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             anchors.margins: 32
             spacing: 12
-            // Shutdown
+
             Rectangle {
                 width: 48
                 height: 48
@@ -448,6 +437,7 @@ WlSessionLock {
                 color: shutdownArea.containsMouse ? Theme.error : "transparent"
                 border.color: Theme.error
                 border.width: 1
+
                 MouseArea {
                     id: shutdownArea
                     anchors.fill: parent
@@ -456,6 +446,7 @@ WlSessionLock {
                         Qt.createQmlObject('import Quickshell.Io; Process { command: ["shutdown", "-h", "now"]; running: true }', lock);
                     }
                 }
+
                 Text {
                     anchors.centerIn: parent
                     text: "power_settings_new"
@@ -464,7 +455,7 @@ WlSessionLock {
                     color: shutdownArea.containsMouse ? Theme.onAccent : Theme.error
                 }
             }
-            // Reboot
+
             Rectangle {
                 width: 48
                 height: 48
@@ -472,6 +463,7 @@ WlSessionLock {
                 color: rebootArea.containsMouse ? Theme.accentPrimary : "transparent"
                 border.color: Theme.accentPrimary
                 border.width: 1
+
                 MouseArea {
                     id: rebootArea
                     anchors.fill: parent
@@ -480,6 +472,7 @@ WlSessionLock {
                         Qt.createQmlObject('import Quickshell.Io; Process { command: ["reboot"]; running: true }', lock);
                     }
                 }
+
                 Text {
                     anchors.centerIn: parent
                     text: "refresh"
@@ -488,7 +481,7 @@ WlSessionLock {
                     color: rebootArea.containsMouse ? Theme.onAccent : Theme.accentPrimary
                 }
             }
-            // Logout
+
             Rectangle {
                 width: 48
                 height: 48
@@ -496,6 +489,7 @@ WlSessionLock {
                 color: logoutArea.containsMouse ? Theme.accentSecondary : "transparent"
                 border.color: Theme.accentSecondary
                 border.width: 1
+
                 MouseArea {
                     id: logoutArea
                     anchors.fill: parent
@@ -504,6 +498,7 @@ WlSessionLock {
                         Qt.createQmlObject('import Quickshell.Io; Process { command: ["loginctl", "terminate-user", "' + Quickshell.env("USER") + '"]; running: true }', lock);
                     }
                 }
+
                 Text {
                     anchors.centerIn: parent
                     text: "exit_to_app"

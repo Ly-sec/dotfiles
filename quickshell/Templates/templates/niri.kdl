@@ -270,8 +270,8 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layer-Rules
 
     layer-rule {
-    match namespace="^swww-daemon$"
-    place-within-backdrop true
+        match namespace="^swww-daemon$"
+        place-within-backdrop true
     }
 
 // ────────────── Environment Variables ──────────────

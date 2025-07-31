@@ -7,7 +7,6 @@ import Quickshell.Io
 import qs.Settings
 import qs.Widgets
 import qs.Helpers
-import qs.Services
 import qs.Components
 
 Rectangle {
@@ -156,7 +155,7 @@ Rectangle {
         Rectangle {
 
             width: 160
-            height: 180
+            height: 220
             color: Theme.surface
             radius: 8
             border.color: Theme.outline
@@ -210,6 +209,45 @@ Rectangle {
                         cursorShape: Qt.PointingHandCursor
                         onClicked: {
                             lockScreen.locked = true;
+                            systemMenu.visible = false;
+                        }
+                    }
+                }
+
+                // Suspend button
+                Rectangle {
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: 36
+                    radius: 6
+                    color: suspendButtonArea.containsMouse ? Theme.accentPrimary : "transparent"
+
+                    RowLayout {
+                        anchors.fill: parent
+                        anchors.margins: 12
+                        spacing: 8
+
+                        Text {
+                            text: "bedtime"
+                            font.family: "Material Symbols Outlined"
+                            font.pixelSize: 16
+                            color: suspendButtonArea.containsMouse ? Theme.onAccent : Theme.textPrimary
+                        }
+
+                        Text {
+                            text: "Suspend"
+                            font.pixelSize: 14
+                            color: suspendButtonArea.containsMouse ? Theme.onAccent : Theme.textPrimary
+                            Layout.fillWidth: true
+                        }
+                    }
+
+                    MouseArea {
+                        id: suspendButtonArea
+                        anchors.fill: parent
+                        hoverEnabled: true
+                        cursorShape: Qt.PointingHandCursor
+                        onClicked: {
+                            suspend();
                             systemMenu.visible = false;
                         }
                     }
@@ -357,12 +395,20 @@ Rectangle {
         command: ["shutdown", "-h", "now"]
         running: false
     }
+
     Process {
         id: rebootProcess
         command: ["reboot"]
         running: false
     }
+
     Process {
+        id: suspendProcess
+        command: ["systemctl", "suspend"]
+        running: false
+    }
+
+        Process {
         id: logoutProcessNiri
         command: ["niri", "msg", "action", "quit", "--skip-confirmation"]
         running: false
@@ -374,12 +420,6 @@ Rectangle {
         running: false
     }
 
-    function shutdown() {
-        shutdownProcess.running = true;
-    }
-    function reboot() {
-        rebootProcess.running = true;
-    }
     function logout() {
         if (WorkspaceManager.isNiri) {
             logoutProcessNiri.running = true;
@@ -390,6 +430,19 @@ Rectangle {
             console.warn("No supported compositor detected for logout");
         }
     }
+
+    function suspend() {
+        suspendProcess.running = true;
+    }
+
+    function shutdown() {
+        shutdownProcess.running = true;
+    }
+
+    function reboot() {
+        rebootProcess.running = true;
+    }
+
 
     property bool panelVisible: false
 

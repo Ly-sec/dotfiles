@@ -15,6 +15,7 @@ Item {
     property int pillHeight: 22
     property int iconSize: 22
     property int pillPaddingHorizontal: 14
+    property bool autoHide: false
 
     // Internal state
     property bool showPill: false
@@ -24,8 +25,8 @@ Item {
     readonly property int pillOverlap: iconSize / 2
     readonly property int maxPillWidth: Math.max(1, textItem.implicitWidth + pillPaddingHorizontal * 2 + pillOverlap)
 
-    signal shown()
-    signal hidden()
+    signal shown
+    signal hidden
 
     width: iconSize + (showPill ? maxPillWidth - pillOverlap : 0)
     height: pillHeight
@@ -54,11 +55,17 @@ Item {
 
         Behavior on width {
             enabled: showAnim.running || hideAnim.running
-            NumberAnimation { duration: 250; easing.type: Easing.OutCubic }
+            NumberAnimation {
+                duration: 250
+                easing.type: Easing.OutCubic
+            }
         }
         Behavior on opacity {
             enabled: showAnim.running || hideAnim.running
-            NumberAnimation { duration: 250; easing.type: Easing.OutCubic }
+            NumberAnimation {
+                duration: 250
+                easing.type: Easing.OutCubic
+            }
         }
     }
 
@@ -73,7 +80,10 @@ Item {
         anchors.right: parent.right
 
         Behavior on color {
-            ColorAnimation { duration: 200; easing.type: Easing.InOutQuad }
+            ColorAnimation {
+                duration: 200
+                easing.type: Easing.InOutQuad
+            }
         }
 
         Text {
@@ -106,11 +116,11 @@ Item {
             easing.type: Easing.OutCubic
         }
         onStarted: {
-            showPill = true
+            showPill = true;
         }
         onStopped: {
-            delayedHideAnim.start()
-            shown()
+            delayedHideAnim.start();
+            shown();
         }
     }
 
@@ -118,8 +128,13 @@ Item {
     SequentialAnimation {
         id: delayedHideAnim
         running: false
-        PauseAnimation { duration: 2500 }
-        ScriptAction { script: if (shouldAnimateHide) hideAnim.start() }
+        PauseAnimation {
+            duration: 2500
+        }
+        ScriptAction {
+            script: if (shouldAnimateHide)
+                hideAnim.start()
+        }
     }
 
     // Hide animation
@@ -143,27 +158,27 @@ Item {
             easing.type: Easing.InCubic
         }
         onStopped: {
-            showPill = false
-            shouldAnimateHide = false
-            hidden()
+            showPill = false;
+            shouldAnimateHide = false;
+            hidden();
         }
     }
 
     // Exposed functions
     function show() {
         if (!showPill) {
-            shouldAnimateHide = true
-            showAnim.start()
+            shouldAnimateHide = autoHide;
+            showAnim.start();
         } else {
             // Reset hide timer if already shown
-            hideAnim.stop()
-            delayedHideAnim.restart()
+            hideAnim.stop();
+            delayedHideAnim.restart();
         }
     }
 
     function hide() {
         if (showPill) {
-            hideAnim.start()
+            hideAnim.start();
         }
     }
 }
