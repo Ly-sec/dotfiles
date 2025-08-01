@@ -85,15 +85,15 @@
       "format": "────────────────────Uptime / Age────────────────────"
     },
     {
-      "type": "command",
-      "key": "  OS Age ",
-      "keyColor": "33",
-      "command": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
-    },
-    {
       "type": "uptime",
       "key": "  Uptime ",
       "keyColor": "33"
+    },
+    {
+    "type": "command",
+    "key": "  OS Age ",
+    "keyColor": "33",
+    "text": "birth_install=$(stat -c %W /); current=$(date +%s); days_difference=$(( (current - birth_install) / 86400 )); echo $days_difference days"
     },
     {
       "type": "custom",
