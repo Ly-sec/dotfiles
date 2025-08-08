@@ -1,46 +1,54 @@
+import QtQuick
 import Quickshell.Io
+import qs.Bar.Modules
+import qs.Helpers
+import qs.Widgets.LockScreen
+import qs.Widgets.Notification
 
-import "./IdleInhibitor.qml"
+Item {
+    id: root
 
-IpcHandler {
-    property var appLauncherPanel
-    property var lockScreen
+    property Applauncher appLauncherPanel
+    property LockScreen lockScreen
     property IdleInhibitor idleInhibitor
-    property var notificationPopup
+    property NotificationPopup notificationPopup
 
-    target: "globalIPC"
+    IpcHandler {
+        target: "globalIPC"
 
-    function toggleIdleInhibitor(): void {
-        idleInhibitor.toggle()
-    }
-
-
-    function toggleNotificationPopup(): void {
-        console.log("[IPC] NotificationPopup toggle() called")
-        notificationPopup.togglePopup();
-    }
-
-    // Toggle Applauncher visibility
-    function toggleLauncher(): void {
-        if (!appLauncherPanel) {
-            console.warn("AppLauncherIpcHandler: appLauncherPanel not set!");
-            return;
+        function toggleIdleInhibitor(): void {
+            root.idleInhibitor.toggle()
         }
-        if (appLauncherPanel.visible) {
-            appLauncherPanel.hidePanel();
-        } else {
-            console.log("[IPC] Applauncher show() called");
-            appLauncherPanel.showAt();
-        }
-    }
 
-    // Toggle LockScreen
-    function toggleLock(): void {
-        if (!lockScreen) {
-            console.warn("LockScreenIpcHandler: lockScreen not set!");
-            return;
+        function toggleNotificationPopup(): void {
+            console.log("[IPC] NotificationPopup toggle() called")
+            // Use the global toggle function from the notification manager
+            root.notificationPopup.togglePopup();
         }
-        console.log("[IPC] LockScreen show() called");
-        lockScreen.locked = true;
+
+        // Toggle Applauncher visibility
+        function toggleLauncher(): void {
+            if (!root.appLauncherPanel) {
+                console.warn("AppLauncherIpcHandler: appLauncherPanel not set!");
+                return;
+            }
+            if (root.appLauncherPanel.visible) {
+                root.appLauncherPanel.hidePanel();
+            } else {
+                console.log("[IPC] Applauncher show() called");
+                root.appLauncherPanel.showAt();
+            }
+        }
+
+        // Toggle LockScreen
+        function toggleLock(): void {
+            if (!root.lockScreen) {
+                console.warn("LockScreenIpcHandler: lockScreen not set!");
+                return;
+            }
+            console.log("[IPC] LockScreen show() called");
+            root.lockScreen.locked = true;
+        }
     }
 }
+

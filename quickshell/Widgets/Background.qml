@@ -35,6 +35,7 @@ ShellRoot {
                 visible: wallpaperSource !== ""
                 cache: true
                 smooth: true
+                mipmap: false
             }
         }
     }

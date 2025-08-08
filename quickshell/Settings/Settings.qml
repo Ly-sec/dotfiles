@@ -29,6 +29,7 @@ Singleton {
             reload()
         }
         onLoaded: function() {
+            console.log("--- Settings loaded ---");
             Qt.callLater(function () {
                 WallpaperManager.setCurrentWallpaper(settings.currentWallpaper, true);
             })
@@ -45,9 +46,10 @@ Singleton {
             property string wallpaperFolder: "/usr/share/wallpapers"
             property string currentWallpaper: ""
             property string videoPath: "~/Videos/"
+            property bool showActiveWindow: true
             property bool showActiveWindowIcon: false
             property bool showSystemInfoInBar: false
-            property bool showCorners: true
+            property bool showCorners: false
             property bool showTaskbar: true
             property bool showMediaInBar: false
             property bool useSWWW: false
@@ -65,6 +67,23 @@ Singleton {
             property real fontSizeMultiplier: 1.0  // Font size multiplier (1.0 = normal, 1.2 = 20% larger, 0.8 = 20% smaller)
             property int taskbarIconSize: 24  // Taskbar icon button size in pixels (default: 32, smaller: 24, larger: 40)
             property var pinnedExecs: [] // Added for AppLauncher pinned apps
+
+            property bool showDock: true
+            property bool dockExclusive: false
+            property bool wifiEnabled: false
+            property bool bluetoothEnabled: false
+            property int recordingFrameRate: 60
+            property string recordingQuality: "very_high"
+            property string recordingCodec: "h264"
+            property string audioCodec: "opus"
+            property bool showCursor: true
+            property string colorRange: "limited"
+            
+            // Monitor/Display Settings
+            property var barMonitors: [] // Array of monitor names to show the bar on
+            property var dockMonitors: [] // Array of monitor names to show the dock on
+            property var notificationMonitors: [] // Array of monitor names to show notifications on, "*" means all monitors
+            property var monitorScaleOverrides: {} // Map of monitor name -> scale override (e.g., 0.8..2.0). When set, Theme.scale() returns this value
         }
     }
 
@@ -73,5 +92,7 @@ Singleton {
         function onRandomWallpaperChanged() { WallpaperManager.toggleRandomWallpaper() }
         function onWallpaperIntervalChanged() { WallpaperManager.restartRandomWallpaperTimer() }
         function onWallpaperFolderChanged() { WallpaperManager.loadWallpapers() }
+        function onNotificationMonitorsChanged() { 
+        }
     }
 }

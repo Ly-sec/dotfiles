@@ -1,118 +1,98 @@
+import QtCore
+import QtQuick
 import Quickshell
 import Quickshell.Io
-import Quickshell.Services.Pipewire
 import Quickshell.Services.Notifications
-import QtQuick
-import QtCore
+import Quickshell.Services.Pipewire
 import qs.Bar
 import qs.Bar.Modules
-import qs.Widgets
-import qs.Widgets.Notification
-import qs.Settings
 import qs.Helpers
-
-import "./Helpers/IdleInhibitor.qml"
-import "./Helpers/IPCHandlers.qml"
+import qs.Settings
+import qs.Widgets
+import qs.Widgets.LockScreen
+import qs.Widgets.Notification
+import qs.Widgets.SettingsWindow
 
 Scope {
     id: root
 
-    property alias appLauncherPanel: appLauncherPanel
-    property var notificationHistoryWin: notificationHistoryWin
+    property var notificationHistoryWin: notificationHistoryLoader.active ? notificationHistoryLoader.item : null
+    property var settingsWindow: null
     property bool pendingReload: false
+    // Volume property reflecting current audio volume in 0-100
+    // Will be kept in sync dynamically below
+    property int volume: (defaultAudioSink && defaultAudioSink.audio && !defaultAudioSink.audio.muted) ? Math.round(defaultAudioSink.audio.volume * 100) : 0
+    // Reference to the default audio sink from Pipewire
+    property var defaultAudioSink: Pipewire.defaultAudioSink
+    property bool isReady: false
+
+    // Function to load notification history
+    function loadNotificationHistory() {
+        if (!notificationHistoryLoader.active)
+            notificationHistoryLoader.loading = true;
+
+        return notificationHistoryLoader;
+    }
 
     // Helper function to round value to nearest step
     function roundToStep(value, step) {
         return Math.round(value / step) * step;
     }
 
-    // Volume property reflecting current audio volume in 0-100
-    // Will be kept in sync dynamically below
-    property int volume: (defaultAudioSink && defaultAudioSink.audio && !defaultAudioSink.audio.muted)
-                        ? Math.round(defaultAudioSink.audio.volume * 100)
-                        : 0
-
     // Function to update volume with clamping, stepping, and applying to audio sink
     function updateVolume(vol) {
         var clamped = Math.max(0, Math.min(100, vol));
         var stepped = roundToStep(clamped, 5);
-        if (defaultAudioSink && defaultAudioSink.audio) {
+        if (defaultAudioSink && defaultAudioSink.audio)
             defaultAudioSink.audio.volume = stepped / 100;
-        }
+
         volume = stepped;
+    }
+
+    // Function to safely show/hide settings window
+    function toggleSettingsWindow() {
+        if (!settingsWindowLoader.active)
+            settingsWindowLoader.loading = true;
+
+        if (settingsWindowLoader.item)
+            settingsWindowLoader.item.visible = !settingsWindowLoader.item.visible;
+
     }
 
     Component.onCompleted: {
         Quickshell.shell = root;
+        Qt.callLater(function() {
+            root.isReady = true;
+        });
     }
 
-    Bar {
-        id: bar
-        shell: root
-        property var notificationHistoryWin: notificationHistoryWin
+    // Keep the Background off the main loader, this will initialize the Settings singleton
+    Background {
     }
 
-    Applauncher {
-        id: appLauncherPanel
-        visible: false
+    // LazyLoader for NotificationHistory - only load when needed
+    LazyLoader {
+        id: notificationHistoryLoader
+
+        loading: false
+
+        component: NotificationHistory {
+        }
+
     }
 
-    LockScreen {
-        id: lockScreen
-        onLockedChanged: {
-            if (!locked && root.pendingReload) {
-                reloadTimer.restart();
-                root.pendingReload = false;
+    // Centralized LazyLoader for SettingsWindow - prevents crashes on multiple opens
+    LazyLoader {
+        id: settingsWindowLoader
+
+        loading: false
+
+        component: SettingsWindow {
+            Component.onCompleted: {
+                root.settingsWindow = this;
             }
         }
-    }
 
-    IdleInhibitor {
-        id: idleInhibitor
-    }
-
-    NotificationServer {
-        id: notificationServer
-        onNotification: function (notification) {
-            console.log("Notification received:", notification.appName);
-            notification.tracked = true;
-            if (notificationPopup.notificationsVisible) {
-                notificationPopup.addNotification(notification);
-            }
-            if (notificationHistoryWin) {
-                notificationHistoryWin.addToHistory({
-                    id: notification.id,
-                    appName: notification.appName || "Notification",
-                    summary: notification.summary || "",
-                    body: notification.body || "",
-                    urgency: notification.urgency,
-                    timestamp: Date.now()
-                });
-            }
-        }
-    }
-
-    NotificationPopup {
-        id: notificationPopup
-        barVisible: bar.visible
-    }
-
-    NotificationHistory {
-        id: notificationHistoryWin
-    }
-
-    // Reference to the default audio sink from Pipewire
-    property var defaultAudioSink: Pipewire.defaultAudioSink
-
-    PwObjectTracker {
-        objects: [Pipewire.defaultAudioSink]
-    }
-
-    IPCHandlers {
-        appLauncherPanel: appLauncherPanel
-        lockScreen: lockScreen
-        idleInhibitor: idleInhibitor
-        notificationPopup: notificationPopup
     }
 
     Connections {
@@ -127,44 +107,132 @@ Scope {
         target: Quickshell
     }
 
-    Timer {
-        id: reloadTimer
-        interval: 500 // ms
-        repeat: false
-        onTriggered: Quickshell.reload(true)
-    }
+    
+    Loader {
+        id: mainLoader
+        
 
-    Connections {
-        target: Quickshell
-        function onScreensChanged() {
-            if (lockScreen.locked) {
-                pendingReload = true;
-            } else {
-                reloadTimer.restart();
+        active: isReady
+
+        sourceComponent: Item {
+            Overview {
             }
-        }
-    }
 
-    // --- NEW: Keep volume property in sync with actual Pipewire audio sink volume ---
+            Bar {
+                id: bar
+                property var notificationHistoryWin: notificationHistoryLoader.active ? notificationHistoryLoader.item : null
 
-    Connections {
-        target: defaultAudioSink.audio
-        onVolumeChanged: {
-            if (defaultAudioSink.audio && !defaultAudioSink.audio.muted) {
-                volume = Math.round(defaultAudioSink.audio.volume * 100);
-                console.log("Volume changed externally to:", volume);
+                shell: root
             }
-        }
-        onMutedChanged: {
-            if (defaultAudioSink.audio) {
-                if (defaultAudioSink.audio.muted) {
-                    volume = 0;
-                    console.log("Audio muted, volume set to 0");
-                } else {
-                    volume = Math.round(defaultAudioSink.audio.volume * 100);
-                    console.log("Audio unmuted, volume restored to:", volume);
+
+            Dock {
+                id: dock
+            }
+
+            Applauncher {
+                id: appLauncherPanel
+
+                visible: false
+            }
+
+            LockScreen {
+                id: lockScreen
+
+                onLockedChanged: {
+                    if (!locked && root.pendingReload) {
+                        reloadTimer.restart();
+                        root.pendingReload = false;
+                    }
                 }
             }
+
+            IdleInhibitor {
+                id: idleInhibitor
+            }
+
+            NotificationServer {
+                // Add notification to the popup manager
+
+                id: notificationServer
+
+                onNotification: function(notification) {
+                    console.log("[Notification] Received notification:", notification.appName, "-", notification.summary);
+                    notification.tracked = true;
+                    if (notificationPopup.notificationsVisible)
+                        notificationPopup.addNotification(notification);
+
+                    if (notificationHistoryLoader.active && notificationHistoryLoader.item)
+                        notificationHistoryLoader.item.addToHistory({
+                        "id": notification.id,
+                        "appName": notification.appName || "Notification",
+                        "summary": notification.summary || "",
+                        "body": notification.body || "",
+                        "urgency": notification.urgency,
+                        "timestamp": Date.now()
+                    });
+
+                }
+            }
+
+            NotificationPopup {
+                id: notificationPopup
+            }
+
+            PwObjectTracker {
+                objects: [Pipewire.defaultAudioSink]
+            }
+
+            IPCHandlers {
+                appLauncherPanel: appLauncherPanel
+                lockScreen: lockScreen
+                idleInhibitor: idleInhibitor
+                notificationPopup: notificationPopup
+            }
+
+            // moved reload popup suppression Connections to root scope so it is active outside Loader
+
+            Connections {
+                // ^commented out for now to fix QS crash on monitor wake.
+                // if it reintroduces the notification bug (https://github.com/Ly-sec/Noctalia/issues/32)...
+                // we need to find a different fix
+                /*else {
+                reloadTimer.restart();
+            } */
+
+                function onScreensChanged() {
+                    if (lockScreen.locked)
+                        pendingReload = true;
+
+                }
+
+                target: Quickshell
+            }
+
+            Connections {
+                function onVolumeChanged() {
+                    if (defaultAudioSink.audio && !defaultAudioSink.audio.muted) {
+                        volume = Math.round(defaultAudioSink.audio.volume * 100);
+                        console.log("Volume changed externally to:", volume);
+                    }
+                }
+
+                function onMutedChanged() {
+                    if (defaultAudioSink.audio) {
+                        if (defaultAudioSink.audio.muted) {
+                            volume = 0;
+                            console.log("Audio muted, volume set to 0");
+                        } else {
+                            volume = Math.round(defaultAudioSink.audio.volume * 100);
+                            console.log("Audio unmuted, volume restored to:", volume);
+                        }
+                    }
+                }
+
+                target: defaultAudioSink ? defaultAudioSink.audio : null
+            }
+
         }
+
     }
+
 }

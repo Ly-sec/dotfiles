@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Effects
 import Quickshell
 import Quickshell.Wayland
-import Qt5Compat.GraphicalEffects
 import qs.Services
 import qs.Settings
 
@@ -34,15 +33,16 @@ ShellRoot {
                 source: wallpaperSource
                 cache: true
                 smooth: true
-                visible: wallpaperSource !== "" // Show the original for FastBlur input
+                mipmap: false
+                visible: wallpaperSource !== ""
             }
             MultiEffect {
                 id: overviewBgBlur
                 anchors.fill: parent
                 source: bgImage
                 blurEnabled: true
-                blur: 0.48   // controls blur strength (0 to 1)
-                blurMax: 128 // max blur radius in pixels
+                            blur: 0.48
+            blurMax: 128
             }
             Rectangle {
                 anchors.fill: parent

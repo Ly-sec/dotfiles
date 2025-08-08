@@ -27,7 +27,7 @@ MouseArea {
         anchors.centerIn: parent
         text: root.icon
         font.family: "Material Symbols Outlined"
-        font.pixelSize: 24
+        font.pixelSize: 24 * Theme.scale(screen)
         color: root.hovering ? Theme.onAccent : Theme.textPrimary
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter

@@ -15,7 +15,7 @@ Rectangle {
         text: Time.time
         font.family: Theme.fontFamily
         font.weight: Font.Bold
-        font.pixelSize: Theme.fontSizeSmall
+        font.pixelSize: Theme.fontSizeSmall * Theme.scale(screen)
         color: Theme.textPrimary
         anchors.centerIn: parent
     }
@@ -41,6 +41,7 @@ Rectangle {
     StyledTooltip {
         id: dateTooltip
         text: Time.dateString
+        positionAbove: false
         tooltipVisible: showTooltip && !calendar.visible
         targetItem: clockWidget
         delay: 200

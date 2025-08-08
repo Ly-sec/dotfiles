@@ -15,7 +15,7 @@ Singleton {
             toggleRandomWallpaper();
         }
     }
-    property string wallpaperDirectory: Settings.settings.wallpaperFolder
+
     property var wallpaperList: []
     property string currentWallpaper: Settings.settings.currentWallpaper
     property bool scanning: false
@@ -46,6 +46,11 @@ Singleton {
             }
             changeWallpaperProcess.running = true;
         }
+
+        if (randomWallpaperTimer.running) {
+            randomWallpaperTimer.restart();
+        }
+
         generateTheme();
     }
 
@@ -91,15 +96,17 @@ Singleton {
 
     FolderListModel {
         id: folderModel
-        nameFilters: ["*.avif", "*.jpg", "*.jpeg", "*.png", "*.gif", "*.pnm", "*.tga", "*.tiff", "*.webp", "*.bmp", "*.farbfeld"]
+        // Swww supports many images format but Quickshell only support a subset of those.
+        nameFilters: ["*.jpg", "*.jpeg", "*.png", "*.gif", "*.pnm", "*.bmp"]
         showDirs: false
         sortField: FolderListModel.Name
         onStatusChanged: {
             if (status === FolderListModel.Ready) {
                 var files = [];
+                var filesSwww = [];
                 for (var i = 0; i < count; i++) {
-                    var fileph = (Settings.settings.wallpaperFolder !== undefined ? Settings.settings.wallpaperFolder : "") + "/" + get(i, "fileName");
-                    files.push(fileph);
+                    var filepath = (Settings.settings.wallpaperFolder !== undefined ? Settings.settings.wallpaperFolder : "") + "/" + get(i, "fileName");
+                    files.push(filepath);
                 }
                 wallpaperList = files;
                 scanning = false;

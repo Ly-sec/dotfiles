@@ -12,6 +12,12 @@
   <a href="https://github.com/Ly-sec/Noctalia/graphs/contributors">
     <img src="https://img.shields.io/github/contributors/Ly-sec/Noctalia?style=for-the-badge&labelColor=0C0D11&color=A8AEFF" alt="GitHub contributors" />
   </a>
+  <a href="https://discord.gg/7JFFYWzWRn">
+    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&labelColor=0C0D11&color=A8AEFF&logo=discord&logoColor=white" alt="Discord" />
+  </a>
+
+
+
 </p>
 
 A sleek, minimal, and thoughtfully crafted setup for Wayland using **Quickshell**. This setup includes a status bar, notification system, control panel, wifi & bluetooth support, power profiles, lockscreen, tray, workspaces, and more — all styled with a warm lavender palette.
@@ -141,6 +147,13 @@ window-rule {
 
 To make the weather widget, wallpaper manager and record button work you will have to open up the settings menu in to right panel (top right button to open panel) and edit said things accordingly.
 
+### Launcher:
+
+The launcher supports special commands for math calculation and clipboard history.
+Once the launcher open you can invoke those special command by typing ">"
+* \>calc : lets you do simple math
+* \>clip : shows clipboard history
+
 </details>
 
 </br>
@@ -178,10 +191,9 @@ qs ipc call globalIPC toggleIdleInhibitor
 
 You will need to install a few things to get everything working:
 
-- `qt6-5compat` for some graphical effects
 - `cava` so the audio visualizer works
 - `gpu-screen-recorder` so that the record button works
-- `xdg-desktop-portal-gnome` or any other xdg-desktop-portal
+- `xdg-desktop-portal-gnome` or any other xdg-desktop-portal (for `gpu-screen-recorder`)
 - `material-symbols-git` so the icons properly show up
 - `swww` to add fancy wallpaper animations (optional)
 - `wallust` to theme the setup based on wallpaper (optional)
@@ -198,7 +210,7 @@ It is perfect now
 
 ## 💜 Credits
 
-Huge thanks to [**@ferrreo**](https://github.com/ferrreo) for all the changes they did and all the cool features they added!
+Huge thanks to [**@ferrreo**](https://github.com/ferrreo) and [**@quadbyte**](https://github.com/quadbyte) for all the changes they did and all the cool features they added!
 
 ---
 
@@ -214,6 +226,14 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 While I actually didn't want to accept donations, more and more people are asking to donate so... I don't know, if you really feel like donating then I obviously highly appreciate it but **PLEASE** never feel forced to donate or anything. It won't change how I work on Noctalia, it's a project that I work on for fun in the end.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R01IX85B)
+
+---
+
+#### Special Thanks
+
+Thank you to everyone who supports me and this project 💜!
+* Gohma
+
 ---
 
 ## License

@@ -1,15 +1,18 @@
 import QtQuick 
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import Quickshell.Widgets
+import QtQuick.Effects
 import qs.Settings
 import qs.Services
 import qs.Components
 
 Item {
+    property var screen: (typeof modelData !== 'undefined' ? modelData : null)
+
     id: mediaControl
     width: visible ? mediaRow.width : 0
-    height: 36
+    height: 36 * Theme.scale(screen)
     visible: Settings.settings.showMediaInBar && MusicManager.currentPlayer
 
     RowLayout {
@@ -19,8 +22,8 @@ Item {
 
         Item {
             id: albumArtContainer
-            width: 24
-            height: 24
+            width: 24 * Theme.scale(screen)
+            height: 24 * Theme.scale(screen)
             Layout.alignment: Qt.AlignVCenter
 
             // Circular spectrum visualizer
@@ -28,8 +31,8 @@ Item {
                 id: spectrum
                 values: MusicManager.cavaValues
                 anchors.centerIn: parent
-                innerRadius: 10
-                outerRadius: 18
+                innerRadius: 10 * Theme.scale(screen)
+                outerRadius: 18 * Theme.scale(screen)
                 fillColor: Theme.accentPrimary
                 strokeColor: Theme.accentPrimary
                 strokeWidth: 0
@@ -39,8 +42,8 @@ Item {
             // Album art image
             Rectangle {
                 id: albumArtwork
-                width: 20
-                height: 20
+                width: 20 * Theme.scale(screen)
+                height: 20 * Theme.scale(screen)
                 anchors.centerIn: parent
                 radius: 12 // circle
                 color: Qt.darker(Theme.surface, 1.1)
@@ -54,17 +57,16 @@ Item {
                     anchors.margins: 1
                     fillMode: Image.PreserveAspectCrop
                     smooth: true
+                    mipmap: true
                     cache: false
                     asynchronous: true
-                    sourceSize.width: 24
-                    sourceSize.height: 24
                     source: MusicManager.trackArtUrl
                     visible: source.toString() !== ""
 
                     // Rounded corners using layer
                     layer.enabled: true
-                    layer.effect: OpacityMask {
-                        cached: true
+                    layer.effect: MultiEffect {
+                        maskEnabled: true
                         maskSource: Rectangle {
                             width: albumArt.width
                             height: albumArt.height
@@ -79,7 +81,7 @@ Item {
                     anchors.centerIn: parent
                     text: "music_note"
                     font.family: "Material Symbols Outlined"
-                    font.pixelSize: 14
+                    font.pixelSize: 14 * Theme.scale(screen)
                     color: Qt.rgba(Theme.textPrimary.r, Theme.textPrimary.g, Theme.textPrimary.b, 0.4)
                     visible: !albumArt.visible
                 }
@@ -96,7 +98,7 @@ Item {
                         anchors.centerIn: parent
                         text: MusicManager.isPlaying ? "pause" : "play_arrow"
                         font.family: "Material Symbols Outlined"
-                        font.pixelSize: 14
+                        font.pixelSize: 14 * Theme.scale(screen)
                         color: "white"
                     }
                 }
@@ -117,7 +119,7 @@ Item {
             text: MusicManager.trackTitle + " - " + MusicManager.trackArtist
             color: Theme.textPrimary
             font.family: Theme.fontFamily
-            font.pixelSize: 12
+            font.pixelSize: 12 * Theme.scale(screen)
             elide: Text.ElideRight
             Layout.maximumWidth: 300
             Layout.alignment: Qt.AlignVCenter
